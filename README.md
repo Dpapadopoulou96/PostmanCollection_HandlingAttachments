@@ -1,0 +1,2 @@
+# PostmanCollection_HandlingAttachments
+HandlingAttachments API Requests
