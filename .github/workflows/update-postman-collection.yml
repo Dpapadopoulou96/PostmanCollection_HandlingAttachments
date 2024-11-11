@@ -1,1 +1,44 @@
+name: Update Postman Collection
+
+on:
+  # The schedule configuration below will automatically run the workflow every 12 hours
+  schedule:
+    - cron: '0 */12 * * *'  # Runs the action every 12 hours
+  
+  # The workflow_dispatch option enables manual trigger for on-demand execution
+  workflow_dispatch:  # Allows manually starting the workflow from GitHub Actions
+
+jobs:
+  update-collection:
+    runs-on: ubuntu-latest  # This specifies the environment for running the job
+
+    steps:
+    # Step 1: Check out the repository
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    # Step 2: Fetch the latest Postman collection
+    - name: Fetch Postman Collection
+      run: |
+        # Replace YOUR_COLLECTION_ID with the actual Postman Collection ID
+        # The secrets.POSTMAN_API_KEY should be set in the repository's "Secrets" settings
+        curl -X GET "https://api.postman.com/collections/39579054-411e0b12-46a9-4f18-aae6-8e257273194e?access_key=${{ secrets.POSTMAN_API_KEY }}" \
+        -H "Accept: application/json" -o postman-collection.json
+
+    # Step 3: Commit and push the updated Postman collection to GitHub
+    - name: Commit and Push changes
+      run: |
+        # Configure Git to use the bot credentials for committing changes
+        git config user.name "GitHub Actions"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Add the updated Postman collection file to the Git index
+        git add postman-collection.json
+        git commit -m "Update Postman Collection"
+        
+        # Push the changes to the main branch
+        # Ensure that the GH_TOKEN is set up as a Personal Access Token with appropriate permissions
+        git push origin HEAD:main
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Add GH_TOKEN in repository's "Secrets" settings
 
