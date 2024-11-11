@@ -5,7 +5,7 @@
       "name": "Postman Collection to Github",
       "description": "this is a testing postman collection",
       "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-      "updatedAt": "2024-11-11T15:07:17.000Z",
+      "updatedAt": "2024-11-11T15:20:45.000Z",
       "createdAt": "2024-11-11T12:17:02.000Z",
       "lastUpdatedBy": "39579054",
       "uid": "39579054-411e0b12-46a9-4f18-aae6-8e257273194e"
@@ -46,7 +46,7 @@
               ],
               "body": {
                 "mode": "raw",
-                "raw": "\r\n--uuid:09ee80b6-eb97-4f5f-b7d0-d981dfe352c6\r\nContent-Type: text/xml; charset=UTF-8\r\nContent-Transfer-Encoding: binary\r\nContent-ID: <root.message@cxf.apache.org>\r\n\r\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n    <Products>\r\n      <Product>\r\n       <ProductId>DELL!!</ProductId>\r\n      </Product>\r\n    </Products>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n--uuid:09ee80b6-eb97-4f5f-b7d0-d981dfe352c6\r\nContent-Type: text/xml;\r\nContent-Transfer-Encoding: binary\r\nContent-ID: <ProductDetails-HT-1080.xml>\r\nContent-Disposition: attachment; name=\"ProductDetails-HT-1080.xml\"; filename=\"ProductDetails-HT-1080.xml\"\r\n\r\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<ProductDetails>\r\n\t<ProductId>HT-1080</ProductId>\r\n\t<Name>Photo Scan</Name>\r\n\t<Category>Scanners</Category>\r\n\t<DimensionDepth>0.4800</DimensionDepth>\r\n\t<DimensionHeight>0.0500</DimensionHeight>\r\n\t<DimensionUnit>m</DimensionUnit>\r\n\t<DimensionWidth>0.3400</DimensionWidth>\r\n\t<Weight>2.300</Weight>\r\n\t<WeightUnit>KG</WeightUnit>\r\n</ProductDetails>\r\n--uuid:09ee80b6-eb97-4f5f-b7d0-d981dfe352c6--",
+                "raw": "\r\n--uuid:09ee80b6-eb97-4f5f-b7d0-d981dfe352c6\r\nContent-Type: text/xml; charset=UTF-8\r\nContent-Transfer-Encoding: binary\r\nContent-ID: <root.message@cxf.apache.org>\r\n\r\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n    <Products>\r\n      <Product>\r\n       <ProductId>LG</ProductId>\r\n      </Product>\r\n    </Products>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n--uuid:09ee80b6-eb97-4f5f-b7d0-d981dfe352c6\r\nContent-Type: text/xml;\r\nContent-Transfer-Encoding: binary\r\nContent-ID: <ProductDetails-HT-1080.xml>\r\nContent-Disposition: attachment; name=\"ProductDetails-HT-1080.xml\"; filename=\"ProductDetails-HT-1080.xml\"\r\n\r\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<ProductDetails>\r\n\t<ProductId>HT-1080</ProductId>\r\n\t<Name>Photo Scan</Name>\r\n\t<Category>Scanners</Category>\r\n\t<DimensionDepth>0.4800</DimensionDepth>\r\n\t<DimensionHeight>0.0500</DimensionHeight>\r\n\t<DimensionUnit>m</DimensionUnit>\r\n\t<DimensionWidth>0.3400</DimensionWidth>\r\n\t<Weight>2.300</Weight>\r\n\t<WeightUnit>KG</WeightUnit>\r\n</ProductDetails>\r\n--uuid:09ee80b6-eb97-4f5f-b7d0-d981dfe352c6--",
                 "options": {
                   "raw": {
                     "language": "text"
