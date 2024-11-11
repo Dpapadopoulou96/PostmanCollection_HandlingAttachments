@@ -25,7 +25,14 @@ jobs:
         curl -X GET "https://api.postman.com/collections/39579054-411e0b12-46a9-4f18-aae6-8e257273194e?access_key=${{ secrets.POSTMAN_API_KEY }}" \
         -H "Accept: application/json" -o postman-collection.json
 
-    # Step 3: Commit and push the updated Postman collection to GitHub
+    # Step 3: Format the Postman collection JSON for better readability
+    - name: Format Postman Collection JSON
+      run: |
+        # Format the JSON file using jq
+        jq . postman-collection.json > postman-collection-formatted.json
+        mv postman-collection-formatted.json postman-collection.json
+
+    # Step 4: Commit and push the updated Postman collection to GitHub
     - name: Commit and Push changes
       run: |
         # Configure Git to use the bot credentials for committing changes
